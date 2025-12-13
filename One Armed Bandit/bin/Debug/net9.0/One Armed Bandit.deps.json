@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "One Armed Bandit/1.0.0": {
+        "runtime": {
+          "One Armed Bandit.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "One Armed Bandit/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,14 @@
+/home/leinarsson/Documents/Programmering/programmering-grund/Uppgift 10 - Enarmad bandit (ej färdig)/One Armed Bandit/bin/Debug/net9.0/One Armed Bandit
+/home/leinarsson/Documents/Programmering/programmering-grund/Uppgift 10 - Enarmad bandit (ej färdig)/One Armed Bandit/bin/Debug/net9.0/One Armed Bandit.deps.json
+/home/leinarsson/Documents/Programmering/programmering-grund/Uppgift 10 - Enarmad bandit (ej färdig)/One Armed Bandit/bin/Debug/net9.0/One Armed Bandit.runtimeconfig.json
+/home/leinarsson/Documents/Programmering/programmering-grund/Uppgift 10 - Enarmad bandit (ej färdig)/One Armed Bandit/bin/Debug/net9.0/One Armed Bandit.dll
+/home/leinarsson/Documents/Programmering/programmering-grund/Uppgift 10 - Enarmad bandit (ej färdig)/One Armed Bandit/bin/Debug/net9.0/One Armed Bandit.pdb
+/home/leinarsson/Documents/Programmering/programmering-grund/Uppgift 10 - Enarmad bandit (ej färdig)/One Armed Bandit/obj/Debug/net9.0/One Armed Bandit.GeneratedMSBuildEditorConfig.editorconfig
+/home/leinarsson/Documents/Programmering/programmering-grund/Uppgift 10 - Enarmad bandit (ej färdig)/One Armed Bandit/obj/Debug/net9.0/One Armed Bandit.AssemblyInfoInputs.cache
+/home/leinarsson/Documents/Programmering/programmering-grund/Uppgift 10 - Enarmad bandit (ej färdig)/One Armed Bandit/obj/Debug/net9.0/One Armed Bandit.AssemblyInfo.cs
+/home/leinarsson/Documents/Programmering/programmering-grund/Uppgift 10 - Enarmad bandit (ej färdig)/One Armed Bandit/obj/Debug/net9.0/One Armed Bandit.csproj.CoreCompileInputs.cache
+/home/leinarsson/Documents/Programmering/programmering-grund/Uppgift 10 - Enarmad bandit (ej färdig)/One Armed Bandit/obj/Debug/net9.0/One Armed Bandit.dll
+/home/leinarsson/Documents/Programmering/programmering-grund/Uppgift 10 - Enarmad bandit (ej färdig)/One Armed Bandit/obj/Debug/net9.0/refint/One Armed Bandit.dll
+/home/leinarsson/Documents/Programmering/programmering-grund/Uppgift 10 - Enarmad bandit (ej färdig)/One Armed Bandit/obj/Debug/net9.0/One Armed Bandit.pdb
+/home/leinarsson/Documents/Programmering/programmering-grund/Uppgift 10 - Enarmad bandit (ej färdig)/One Armed Bandit/obj/Debug/net9.0/One Armed Bandit.genruntimeconfig.cache
+/home/leinarsson/Documents/Programmering/programmering-grund/Uppgift 10 - Enarmad bandit (ej färdig)/One Armed Bandit/obj/Debug/net9.0/ref/One Armed Bandit.dll
