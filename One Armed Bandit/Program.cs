@@ -43,7 +43,6 @@ void Gamble()
     else
     {
         Console.ForegroundColor = ConsoleColor.Red;
-        totalLosses += bet;
     }
     Console.Write("|" + chars[randomize] + "|");
     Thread.Sleep(sleepTime);
@@ -53,7 +52,6 @@ void Gamble()
     if (third != second)
     {
         Console.ForegroundColor = ConsoleColor.Red;
-        totalLosses += bet;
 
     }
     Console.Write("|" + chars[randomize]+ "|");
@@ -63,13 +61,17 @@ void Gamble()
         Console.WriteLine("So close!");
     }
     Console.WriteLine("\n\n...");
-    Console.ReadKey();
 
     if (first == second && first == third)
     {
         account += price;
         totalWinnings += price;
         VictoryScreen();
+    }
+    else
+    {
+        totalLosses += bet;
+        Console.ReadKey();
     }
 
 }
@@ -105,7 +107,6 @@ void OutOfMoney()
     Console.WriteLine("Current balance: " + account + "\n");
     Console.WriteLine("How much would you like to bet?");
     bet = int.Parse(Console.ReadLine()!);
-    totalBetting += bet;
 
     if (bet > account || bet < 1)
     {
@@ -129,6 +130,7 @@ void OutOfMoney()
 
     else
     {
+        totalBetting += bet;
         account -= bet;
         price = bet*2;
         Gamble();

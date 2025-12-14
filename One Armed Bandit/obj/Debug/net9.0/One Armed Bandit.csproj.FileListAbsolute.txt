@@ -12,3 +12,4 @@
 /home/leinarsson/Documents/Programmering/programmering-grund/Uppgift 10 - Enarmad bandit (ej färdig)/One Armed Bandit/obj/Debug/net9.0/One Armed Bandit.pdb
 /home/leinarsson/Documents/Programmering/programmering-grund/Uppgift 10 - Enarmad bandit (ej färdig)/One Armed Bandit/obj/Debug/net9.0/One Armed Bandit.genruntimeconfig.cache
 /home/leinarsson/Documents/Programmering/programmering-grund/Uppgift 10 - Enarmad bandit (ej färdig)/One Armed Bandit/obj/Debug/net9.0/ref/One Armed Bandit.dll
+/home/leinarsson/Documents/Programmering/programmering-grund/Uppgift 10 - Enarmad bandit (ej färdig)/One Armed Bandit/obj/Debug/net9.0/One Armed Bandit.sourcelink.json
