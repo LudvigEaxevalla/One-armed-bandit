@@ -1,8 +1,11 @@
-﻿using System.Reflection;
+﻿using System.Data;
+using System.Globalization;
+using System.Numerics;
+using System.Reflection;
 
 Random rnd = new Random();
 
-char[] chars = {'X', 'Y', 'Z'};
+char[] letters = {'X', 'Y', 'Z'};
 
 int randomize = rnd.Next(0,3);
 int sleepTime = 500;
@@ -15,6 +18,15 @@ int totalLosses = 0;
 int totalWinnings = 0;
 int totalBetting = 0;
 bool playing = false;
+bool won = false;
+
+int size = 3;
+int row = 0;
+int col = 0;
+char[,] matrix = new char[size, size];
+
+
+
 
 
 void Gamble()
@@ -30,7 +42,8 @@ void Gamble()
     Console.WriteLine("WITH " + bet + " DOLLARS ON THE LINE\n\n");
     randomize = rnd.Next(0,3);
     first = randomize;
-    Console.Write("|" + chars[randomize]+"|");
+    Console.Write("|" + letters[randomize]+"|");
+
     Thread.Sleep(sleepTime);
 
     randomize = rnd.Next(0,3);
@@ -44,7 +57,7 @@ void Gamble()
     {
         Console.ForegroundColor = ConsoleColor.Red;
     }
-    Console.Write("|" + chars[randomize] + "|");
+    Console.Write("|" + letters[randomize] + "|");
     Thread.Sleep(sleepTime);
 
     randomize = rnd.Next(0,3);
@@ -54,7 +67,7 @@ void Gamble()
         Console.ForegroundColor = ConsoleColor.Red;
 
     }
-    Console.Write("|" + chars[randomize]+ "|");
+    Console.Write("|" + letters[randomize]+ "|");
     Console.ResetColor();
     if (second == first && third != second)
     {
@@ -74,6 +87,95 @@ void Gamble()
         Console.ReadKey();
     }
 
+} 
+
+
+
+void GetColor()
+{
+        if (letters[randomize] == 'X')
+    {
+        Console.ForegroundColor = ConsoleColor.Green;
+    }
+        if (letters[randomize]  == 'Y')
+    {
+        Console.ForegroundColor = ConsoleColor.Blue;
+    }
+        if (letters[randomize]  == 'Z')
+    {
+        Console.ForegroundColor = ConsoleColor.Yellow;
+    } 
+    
+}
+
+void PrintAndFind()
+{
+    //GetRandomChar();
+    sleepTime = 500;
+    char[,] matrix = new char[size, size];
+    for (row = 0; row < size; row++)
+    {
+        for (col = 0; col < size; col++)
+        {
+            randomize = rnd.Next(letters.Length);
+            matrix[row,col] = letters[randomize];
+            Thread.Sleep(sleepTime);
+            GetColor();
+            Console.Write("|" + matrix[row,col] + "|");
+        }
+        Console.WriteLine();
+
+    }
+    
+    for (int row = 0; row < size; row++)
+    {
+        for (int col = 0; col < size; col++)
+        {
+            //Console.WriteLine($"{matrix[row,col]} is in row {row}, col {col}");
+
+            if (matrix[row,0] == matrix[row,1] && matrix[row,0] == matrix[row,2] || matrix[0,col] == matrix[1,col] && matrix[0,col] == matrix[2,col])
+            {
+                account += price;
+                totalWinnings += price;
+                Console.ReadKey();
+                VictoryScreen();
+            }
+            else
+            {
+                Console.WriteLine("No win this time");
+                totalLosses += bet;
+                Console.ReadKey();
+            }
+        }
+    } 
+
+}
+
+ void BonusGamble()
+{
+    Console.Clear();
+    sleepTime = 500;
+    Console.ForegroundColor = ConsoleColor.Green;
+    Thread.Sleep(sleepTime);
+    Console.WriteLine("WITH " + bet + " DOLLARS ON THE LINE\n\n");
+    PrintAndFind();
+
+    /*for (int i = 1; i < 10; i++)
+    {
+
+        Thread.Sleep(sleepTime);
+       /* GetRandomChar();
+        PrintChar();
+        if (i == 3 || i == 6)
+        {
+            Console.WriteLine("");
+        }
+    //Console.ReadKey();
+    //FindPos();
+
+
+    }  */
+    
 }
 
 
@@ -133,7 +235,8 @@ void OutOfMoney()
         totalBetting += bet;
         account -= bet;
         price = bet*2;
-        Gamble();
+        //Gamble();
+        BonusGamble();
     }     
     }
 
