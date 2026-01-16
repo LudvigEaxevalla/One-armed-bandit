@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("One Armed Bandit")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+03f85fa921c13062fae70bf418abdeb5a879f11f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f52a5fbfa435d81eef08a0e6d6ccb9ec46bb3e76")]
 [assembly: System.Reflection.AssemblyProductAttribute("One Armed Bandit")]
 [assembly: System.Reflection.AssemblyTitleAttribute("One Armed Bandit")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

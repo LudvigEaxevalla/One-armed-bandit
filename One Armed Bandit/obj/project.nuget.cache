@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "W4KZcKWfMpU=",
+  "dgSpecHash": "LOKR6ZocFfo=",
   "success": true,
-  "projectFilePath": "/home/leinarsson/Documents/Programmering/programmering-grund/Uppgift 10 - Enarmad bandit (ej färdig)/One Armed Bandit/One Armed Bandit.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Ludvig\\OneDrive\\Documents\\Skola\\Programmering Grund\\One-armed-bandit\\One Armed Bandit\\One Armed Bandit.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ludvig\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.11\\microsoft.netcore.app.ref.9.0.11.nupkg.sha512",
+    "C:\\Users\\Ludvig\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\9.0.11\\microsoft.windowsdesktop.app.ref.9.0.11.nupkg.sha512",
+    "C:\\Users\\Ludvig\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\9.0.11\\microsoft.aspnetcore.app.ref.9.0.11.nupkg.sha512",
+    "C:\\Users\\Ludvig\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\9.0.11\\microsoft.netcore.app.host.win-x64.9.0.11.nupkg.sha512"
+  ],
   "logs": []
 }

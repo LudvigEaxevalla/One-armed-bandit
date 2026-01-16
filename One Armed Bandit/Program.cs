@@ -91,63 +91,71 @@ void Gamble()
 
 
 
-void GetColor()
+void GetColor(char c)
 {
-        if (letters[randomize] == 'X')
+    Console.ForegroundColor = c switch
     {
-        Console.ForegroundColor = ConsoleColor.Green;
+        'X' => ConsoleColor.Green,
+        'Y' => ConsoleColor.Blue,
+        'Z' => ConsoleColor.Yellow,
+        _ => ConsoleColor.White
+    };
+        Console.BackgroundColor = c switch
+    {
+        'X' => ConsoleColor.Red,
+        'Y' => ConsoleColor.Yellow,
+        'Z' => ConsoleColor.DarkBlue
+    };
+}
+
+bool CheckWin()
+{
+    // Rows & columns
+    for (int i = 0; i < size; i++)
+    {
+        if (matrix[i, 0] == matrix[i, 1] && matrix[i, 0] == matrix[i, 2])
+            return true;
+
+        if (matrix[0, i] == matrix[1, i] && matrix[0, i] == matrix[2, i])
+            return true;
     }
-        if (letters[randomize]  == 'Y')
-    {
-        Console.ForegroundColor = ConsoleColor.Blue;
-    }
-        if (letters[randomize]  == 'Z')
-    {
-        Console.ForegroundColor = ConsoleColor.Yellow;
-    } 
-    
+
+    return false;
 }
 
 void PrintAndFind()
 {
     //GetRandomChar();
     sleepTime = 500;
-    char[,] matrix = new char[size, size];
-    for (row = 0; row < size; row++)
-    {
-        for (col = 0; col < size; col++)
-        {
-            randomize = rnd.Next(letters.Length);
-            matrix[row,col] = letters[randomize];
-            Thread.Sleep(sleepTime);
-            GetColor();
-            Console.Write("|" + matrix[row,col] + "|");
-        }
-        Console.WriteLine();
-
-    }
-    
     for (int row = 0; row < size; row++)
     {
         for (int col = 0; col < size; col++)
         {
-            //Console.WriteLine($"{matrix[row,col]} is in row {row}, col {col}");
+            char symbol = letters[rnd.Next(letters.Length)];
+            matrix[row, col] = symbol;
 
-            if (matrix[row,0] == matrix[row,1] && matrix[row,0] == matrix[row,2] || matrix[0,col] == matrix[1,col] && matrix[0,col] == matrix[2,col])
-            {
-                account += price;
-                totalWinnings += price;
-                Console.ReadKey();
-                VictoryScreen();
-            }
-            else
-            {
-                Console.WriteLine("No win this time");
-                totalLosses += bet;
-                Console.ReadKey();
-            }
+            GetColor(symbol);
+            Console.Write($"|{symbol}|");
+            Thread.Sleep(sleepTime);
         }
-    } 
+        Console.WriteLine();
+    }
+
+    Console.ResetColor();
+    Console.WriteLine("\n...");
+
+    if (CheckWin())
+    {
+        account += price;
+        totalWinnings += price;
+        VictoryScreen();
+    }
+    else
+    {
+        Console.WriteLine("No win this time");
+        totalLosses += bet;
+        Console.ReadKey();
+    }
 
 }
 
@@ -265,58 +273,52 @@ account. You may not deposit less than 10 or more than 1000.
 
 while(deposit <= 0)
 {
-    Console.WriteLine("How mouch would you like to deposit");
-    deposit = int.Parse(Console.ReadLine()!);
+    Console.WriteLine("How mouch would you like to deposit (Minimum 10, Maximum 1000)");
 
-    if (deposit >= 10 && deposit <= 1000)
+    while (!int.TryParse(Console.ReadLine(), out deposit) || deposit < 10 || deposit > 1000)
     {
-        account += deposit;
-        playing = true;
+        Console.WriteLine("Invalid amount. Try again.");
     }
-    else
-    {
-        Console.WriteLine("Invalid ammount... Please try again");
-        deposit = 0;
-    }
+
+    account = deposit;
+    playing = true;
 
 }
 
 
 while (playing)
 {
-
     Console.Clear();
     Console.ForegroundColor = ConsoleColor.Green;
-    Console.WriteLine("Current balance: " + account + "\n");
+    Console.WriteLine($"Balance: {account}");
     Console.ResetColor();
-
-    Console.WriteLine(@"The rules of the game are simple - 
-    1. Choose how much you want to bet
-    2. If you get three of the same symbol, you win double the ammount
-    3. Cash out anytime you like
+    Console.ForegroundColor = ConsoleColor.Yellow;
+    Console.WriteLine(@"
+    
+Rules:
+1. Bet
+2. Win when you get three (X, Y or Z) in a row, horizontaly or verticly
+    
+Cash out any time
     ");
+    Console.ResetColor();
+    Console.WriteLine("\nWhat do you wanna do?");
+    Console.ForegroundColor = ConsoleColor.Blue;
+    Console.WriteLine("(1) Play");
+    Console.ForegroundColor = ConsoleColor.DarkYellow;
+    Console.WriteLine("(2) Cash out");
 
-    int option = 0;
-    Console.WriteLine("\nEnter (1) to play\nEnter (2) to cash out");
-    option = int.Parse(Console.ReadLine()!);
+    if (!int.TryParse(Console.ReadLine(), out int option))
+        continue;
 
-    switch (option)
-    {
-        case 1:
-            BettingScreen();
-        break;
-        case 2:
-            CashoutScreen();
-        break;
-        default:
-            Console.WriteLine("Please choose 1 or 2");
-            Console.ReadKey();
-        break;
-    }
+    if (option == 1)
+        BettingScreen();
+    else if (option == 2)
+        CashoutScreen();
 
     if (account <= 0)
     {
-        OutOfMoney();
+        Console.WriteLine("You're out of money!");
+        break;
     }
-
 }
