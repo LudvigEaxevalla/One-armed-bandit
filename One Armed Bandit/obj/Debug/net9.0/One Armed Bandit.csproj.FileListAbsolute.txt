@@ -13,3 +13,18 @@
 /home/leinarsson/Documents/Programmering/programmering-grund/Uppgift 10 - Enarmad bandit (ej färdig)/One Armed Bandit/obj/Debug/net9.0/One Armed Bandit.genruntimeconfig.cache
 /home/leinarsson/Documents/Programmering/programmering-grund/Uppgift 10 - Enarmad bandit (ej färdig)/One Armed Bandit/obj/Debug/net9.0/ref/One Armed Bandit.dll
 /home/leinarsson/Documents/Programmering/programmering-grund/Uppgift 10 - Enarmad bandit (ej färdig)/One Armed Bandit/obj/Debug/net9.0/One Armed Bandit.sourcelink.json
+C:\Users\Ludvig\OneDrive\Documents\Skola\Programmering Grund\One-armed-bandit\One Armed Bandit\bin\Debug\net9.0\One Armed Bandit.exe
+C:\Users\Ludvig\OneDrive\Documents\Skola\Programmering Grund\One-armed-bandit\One Armed Bandit\bin\Debug\net9.0\One Armed Bandit.deps.json
+C:\Users\Ludvig\OneDrive\Documents\Skola\Programmering Grund\One-armed-bandit\One Armed Bandit\bin\Debug\net9.0\One Armed Bandit.runtimeconfig.json
+C:\Users\Ludvig\OneDrive\Documents\Skola\Programmering Grund\One-armed-bandit\One Armed Bandit\bin\Debug\net9.0\One Armed Bandit.dll
+C:\Users\Ludvig\OneDrive\Documents\Skola\Programmering Grund\One-armed-bandit\One Armed Bandit\bin\Debug\net9.0\One Armed Bandit.pdb
+C:\Users\Ludvig\OneDrive\Documents\Skola\Programmering Grund\One-armed-bandit\One Armed Bandit\obj\Debug\net9.0\One Armed Bandit.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ludvig\OneDrive\Documents\Skola\Programmering Grund\One-armed-bandit\One Armed Bandit\obj\Debug\net9.0\One Armed Bandit.AssemblyInfoInputs.cache
+C:\Users\Ludvig\OneDrive\Documents\Skola\Programmering Grund\One-armed-bandit\One Armed Bandit\obj\Debug\net9.0\One Armed Bandit.AssemblyInfo.cs
+C:\Users\Ludvig\OneDrive\Documents\Skola\Programmering Grund\One-armed-bandit\One Armed Bandit\obj\Debug\net9.0\One Armed Bandit.csproj.CoreCompileInputs.cache
+C:\Users\Ludvig\OneDrive\Documents\Skola\Programmering Grund\One-armed-bandit\One Armed Bandit\obj\Debug\net9.0\One Armed Bandit.sourcelink.json
+C:\Users\Ludvig\OneDrive\Documents\Skola\Programmering Grund\One-armed-bandit\One Armed Bandit\obj\Debug\net9.0\One Armed Bandit.dll
+C:\Users\Ludvig\OneDrive\Documents\Skola\Programmering Grund\One-armed-bandit\One Armed Bandit\obj\Debug\net9.0\refint\One Armed Bandit.dll
+C:\Users\Ludvig\OneDrive\Documents\Skola\Programmering Grund\One-armed-bandit\One Armed Bandit\obj\Debug\net9.0\One Armed Bandit.pdb
+C:\Users\Ludvig\OneDrive\Documents\Skola\Programmering Grund\One-armed-bandit\One Armed Bandit\obj\Debug\net9.0\One Armed Bandit.genruntimeconfig.cache
+C:\Users\Ludvig\OneDrive\Documents\Skola\Programmering Grund\One-armed-bandit\One Armed Bandit\obj\Debug\net9.0\ref\One Armed Bandit.dll
